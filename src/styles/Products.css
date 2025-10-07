@@ -1662,11 +1662,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 1rem;
+  object-fit: cover;
+  padding: 0rem;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: center;
   will-change: transform;
+  transform: scale(1.2);
 }
 
 .product-card:hover .product-image {
@@ -1675,7 +1676,7 @@ body {
 }
 
 .product-card:hover .product-image img {
-  transform: scale(1.08);
+  transform: scale(1.25);
 }
 
 /* Product Badge System */
@@ -2130,9 +2131,6 @@ button, .btn {
   border: none;
   padding: var(--space-md) var(--space-lg);
   border-radius: var(--radius-lg);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-base);
 }
 
 .reset-search-btn:hover {
@@ -2318,12 +2316,7 @@ button, .btn {
     padding: 0 0.25rem;
     width: 100%;
   }
-  /* Fill product images on mobile */
-  .product-image img {
-    object-fit: cover;
-    padding: 0;
-  }
-  /* Tighter price typography on mobile */
+    /* Tighter price typography on mobile */
   .product-card .price-container .final-price {
     font-size: 0.85em;
   }
@@ -2375,6 +2368,9 @@ button, .btn {
     padding-top: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
     margin-bottom: 0.5rem;
+  
+    
+  
   }
   
   .product-details {
@@ -2837,3 +2833,4 @@ select:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
